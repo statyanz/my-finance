@@ -14,7 +14,7 @@
 <body>
   <div id="cloud-toolbar" hidden>
     <span id="cloud-status" role="status" aria-live="polite">Загрузка...</span>
-    <div><button id="retry-save" hidden>Повторить сохранение</button><button id="export-data">Скачать копию</button><button id="load-latest" hidden>Загрузить облачную версию</button><button id="logout">Выйти</button></div>
+    <div><button id="retry-save" hidden>Повторить сохранение</button><button id="history-upload">Загрузить историю</button><input id="history-file" type="file" accept="application/json,.json" hidden><button id="export-data">Скачать копию</button><button id="load-latest" hidden>Загрузить облачную версию</button><button id="logout">Выйти</button></div>
   </div>
   <main id="gate">
     <h1>Мои финансы</h1><p id="gate-message">Войдите своим Google-аккаунтом.</p>
@@ -22,7 +22,7 @@
     <label id="import-panel" hidden>Загрузить вашу историю<input id="import-data" type="file" accept="application/json,.json"></label>
     <p id="gate-error" role="alert"></p>
   </main>
-  <div id="application" hidden></div>
+  <div id="application" hidden></div><dialog id="history-preview"><h2>Загрузка истории</h2><p id="history-summary"></p><p>Текущая версия будет скачана перед заменой. Применяйте только сверенный файл.</p><p id="history-error" role="alert"></p><button id="history-cancel">Отмена</button><button id="history-apply">Применить историю</button></dialog>
   <script type="module" src="./cloud.mjs"></script>
 </body>
 </html>
