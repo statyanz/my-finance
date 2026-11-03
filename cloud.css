@@ -1,0 +1,18 @@
+:root{color-scheme:light dark;font-family:Inter,Segoe UI,Arial,sans-serif;background:light-dark(#f4f6f5,#171e22);color:light-dark(#202b35,#e4e9ee)}
+body{margin:0;padding:18px;max-width:1200px;margin-inline:auto}
+button,input{font:inherit}
+#gate{max-width:430px;margin:10vh auto;padding:28px;border:1px solid light-dark(#dce5df,#35423c);border-radius:16px;background:light-dark(#fff,#20282d)}
+#gate h1{font-size:25px;font-weight:500;margin-top:0}
+#gate p{line-height:1.5}
+#gate button{padding:12px 18px;background:light-dark(#19664e,#8bd5b7);color:light-dark(#fff,#171e22);border:0;border-radius:8px;cursor:pointer}
+#gate-error{color:light-dark(#ad433b,#efaaa4)}
+#import-panel{display:grid;gap:12px}#import-data{max-width:100%}
+#cloud-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px;font-size:12px}
+#cloud-toolbar>div{display:flex;gap:8px;flex-wrap:wrap}
+#cloud-toolbar button{border:1px solid light-dark(#dce5df,#35423c);background:light-dark(#fff,#20282d);color:inherit;border-radius:7px;padding:7px 10px;cursor:pointer}
+[hidden]{display:none!important}
+#application{position:relative}
+#application.sync-blocked:after{content:'Сохраните копию и загрузите облачную версию, чтобы продолжить';position:absolute;inset:0;background:light-dark(#f4f6f5e8,#171e22e8);z-index:50;padding:40px;font-size:18px}
+.cp-chart svg,.fa-chart svg{max-width:100%}
+.fc-tooltip{position:fixed;z-index:200;pointer-events:none;padding:8px 10px;border-radius:8px;max-width:280px;background:light-dark(#202b35,#e4e9ee);color:light-dark(#fff,#171e22);font-size:12px;box-shadow:0 3px 12px #0002}
+@media(max-width:600px){body{padding:8px}#cloud-toolbar button{min-height:40px}}

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#19664e">
+  <title>Мои финансы</title>
+  <link rel="stylesheet" href="./app.css">
+  <link rel="stylesheet" href="./cloud.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+  <div id="cloud-toolbar" hidden>
+    <span id="cloud-status" role="status" aria-live="polite">Загрузка...</span>
+    <div><button id="retry-save" hidden>Повторить сохранение</button><button id="export-data">Скачать копию</button><button id="load-latest" hidden>Загрузить облачную версию</button><button id="logout">Выйти</button></div>
+  </div>
+  <main id="gate">
+    <h1>Мои финансы</h1><p id="gate-message">Войдите своим Google-аккаунтом.</p>
+    <button id="login" type="button">Войти через Google</button>
+    <label id="import-panel" hidden>Загрузить вашу историю<input id="import-data" type="file" accept="application/json,.json"></label>
+    <p id="gate-error" role="alert"></p>
+  </main>
+  <div id="application" hidden></div>
+  <script type="module" src="./cloud.mjs"></script>
+</body>
+</html>
